@@ -1,0 +1,891 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url(/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src: url(/fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url(/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+body {
+  color: #323338;
+  background-color: #fcfdfc;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 16px;
+}
+
+section {
+  width: 100%;
+}
+
+.japanese-heading {
+  color: #323338;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.japanese-block {
+  border: 1px solid rgb(236, 240, 243);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.2s;
+}
+
+.japanese-block:hover {
+  box-shadow: 0px 1px 20px 0px rgba(81, 100, 112, 0.14);
+}
+
+.japanese-center {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* Меню в хэдере */
+.japanese-header-menu__background {
+  background-color: #f3f6f8;
+  border: 2px solid #e4eaed;
+}
+
+.japanese-header-menu {
+  display: inline-flex;
+  min-height: 45px;
+  font-size: 12px;
+}
+
+.japanese-header-menu__wrapper,
+.japanese-header-menu__wrapper .japanese-header-menu {
+  padding: 0;
+  background-color: inherit;
+}
+
+.japanese-header-menu__item .menu {
+  min-width: 100%;
+  padding: 0;
+  transform: translateY(9px);
+}
+
+.japanese-header-menu__item .menu {
+  border: 0;
+  box-shadow: 0px 1px 10px 0px rgba(81, 100, 112, 0.14);
+}
+
+.japanese-header-menu__item .menu .japanese-header-menu__link {
+  background-color: #fff;
+  justify-content: flex-start;
+  padding: 7px 16px;
+}
+
+.japanese-header-menu__item--border {
+  align-self: stretch;
+  border-left: 2px solid #e4eaed;
+  border-right: 2px solid #e4eaed;
+}
+
+.japanese-header-menu .japanese-header-menu__link {
+  height: 100%;
+  padding: 17px 9px;
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  color: #404040;
+  font-size: inherit;
+}
+
+.japanese-header-menu__link:before {
+  display: block;
+  margin-right: 5px;
+}
+
+.japanese-header-menu__link:after {
+  display: none !important;
+}
+
+.japanese-header-menu__link.japanese-header-menu__link--region {
+  padding: 15px 10px;
+  background-image: url(/img/icon-arrow.png);
+  background-position: 100% center;
+  background-size: 10px 6px;
+  font-size: 14px;
+}
+
+.japanese-header-menu__link--delivery:before {
+  content: url(/img/icon-delivery.svg);
+}
+
+.japanese-header-menu__link--tech:before {
+  content: url(/img/icon-tech.svg);
+}
+
+.japanese-header-menu__link--faq:before {
+  content: url(/img/icon-faq.svg);
+}
+
+.japanese-header-menu__link--contacts:before {
+  content: url(/img/icon-contacts.svg);
+}
+
+.japanese-header-menu__link--sign-up:before {
+  content: url(/img/icon-sign-up.svg);
+}
+
+.japanese-header-menu__link--sign-in:before {
+  content: url(/img/icon-sign-in.svg);
+}
+
+.japanese-header-menu__link.japanese-header-menu__link--login {
+  font-size: 14px;
+  color: #fff;
+  background-color: #db001b;
+  box-shadow: 0px 2px 0px 0px #db001b,
+  0px -2px 0px 0px #db001b;
+}
+
+/* Логотип, контакты и корзина */
+
+.japanese-header-main {
+  padding: 20px 0;
+}
+
+.japanese-header-main-contacts {
+  position: relative;
+  padding-left: 10px;
+}
+
+.japanese-header-main-contacts:before {
+  content: url(/img/icon-phone.svg);
+  position: absolute;
+  left: -20px;
+  top: 16px;
+}
+
+.japanese-header-main-contacts__phone {
+  display: block;
+  margin-bottom: 5px;
+  color: #323338;
+  font-size: 22px;
+  line-height: 16px;
+  font-weight: 700;
+  text-decoration-style: dashed;
+  text-decoration-line: underline;
+  text-decoration-color: #323338;
+  transition: all 0.2s;
+}
+
+.japanese-header-main-contacts__phone:hover,
+.japanese-header-main-contacts__phone:focus {
+  color: #db001b;
+  text-decoration-color: #db001b;
+}
+
+.japanese-header-main-contacts__free {
+  color: #91a7b3;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.japanese-header-main-cart {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.japanese-header-main-cart__link {
+  display: flex;
+  align-items: center;
+  color: #404040;
+  font-size: 14px;
+}
+
+.japanese-header-main-cart__link:before {
+  content: url(/img/icon-cart.svg);
+  margin-right: 11px;
+}
+
+.japanese-header-main-cart__sum {
+  margin-left: 9px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.japanese-header-main-cart__sum:after {
+  content: '₽';
+  font-size: 14px;
+}
+
+.japanese-header-main-cart__count {
+  margin-right: 11px;
+  padding: 5px 7px;
+  border-radius: 50%;
+  background-color: #db001b;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 28px;
+}
+
+/* Поиск */
+
+.japanese-search .tabs {
+  display: flex;
+  border-radius: 5px;
+}
+
+.japanese-search .tabs-title {
+  flex: 1 1;
+  text-align: center;
+}
+
+.japanese-search .tabs-link {
+  background-color: #f3f6f8;
+  color: #323338;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tabs-title:not(.is-active):hover .tabs-link {
+  background-color: #e4eaed;
+  color: #323232;
+}
+
+.tabs-title.is-active .tabs-link {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  outline: 0;
+  background-color: #323338;
+  color: #fff;
+}
+
+.tabs-content {
+  margin-top: -1px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #323232;
+}
+
+.input-group {
+  position: relative;
+}
+
+.japanese-search-field {
+  padding-left: 21px;
+  color: #323338;
+  font-size: 14px;
+}
+
+.japanese-search-field::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #323338;
+  font-size: 14px;
+}
+.japanese-search-field::-moz-placeholder { /* Firefox 19+ */
+  color: #323338;
+  font-size: 14px;
+}
+.japanese-search-field:-ms-input-placeholder { /* IE 10+ */
+  color: #323338;
+  font-size: 14px;
+}
+.japanese-search-field:-moz-placeholder { /* Firefox 18- */
+  color: #323338;
+  font-size: 14px;
+}
+
+.japanese-search .dropdown-pane.dropdown-brand {
+  width: 100%;
+}
+
+.japanese-search .dropdown-pane.is-open {
+  margin-top: 5px;
+}
+
+.japanese-search-dropdown__button {
+  margin-bottom: 0;
+  padding-left: 21px;
+  padding-right: 83px;
+  border: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #fff;
+  color: #323338;
+  font-size: 14px;
+}
+
+.japanese-search-dropdown {
+  display: flex;
+}
+
+.japanese-search-dropdown__list {
+  flex: 1 1;
+  list-style: none;
+}
+
+.japanese-search-dropdown__item {
+  margin-bottom: 20px;
+}
+
+.japanese-search-dropdown__list--popular .japanese-search-dropdown__link {
+  font-weight: 700;
+}
+
+.japanese-search-dropdown__link {
+  color: #404040;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.japanese-search-dropdown__link:hover,
+.japanese-search-dropdown__link:focus,
+.japanese-search-dropdown__link:active {
+  color: #1b75cc;
+}
+
+.japanese-search-field {
+  border: 0;
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+}
+
+.japanese-search-detailed__button {
+  padding-right: 20px;
+  padding-left: 41px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.japanese-search-dropdown__button:hover,
+.japanese-search-dropdown__button:focus,
+.japanese-search-dropdown__button:active, 
+.japanese-search-detailed__button:hover,
+.japanese-search-detailed__button:focus,
+.japanese-search-detailed__button:active {
+  background-color: #fff;
+  color: #323338;
+}
+
+.japanese-search-detailed__text {
+  color: #808080;
+  font-size: 11px;
+}
+
+.japanese-search-detailed__text:hover {
+  color: #323338;
+}
+
+.japanese-search-detailed__button .japanese-search-detailed__text--active {
+  display: none;
+}
+
+.japanese-search-detailed__button.hover .japanese-search-detailed__text--normal {
+  display: none;
+}
+
+.japanese-search-detailed__button.hover .japanese-search-detailed__text--active {
+  display: inline;
+}
+
+.japanese-search-detailed__content {
+  position: static;
+  left: 0 !important;
+  top: 0 !important;
+  margin-top: 20px;
+}
+
+.button.japanese-search-submit {
+  margin-left: 20px;
+  border-radius: 3px !important;
+  background-color: #fde30c;
+  color: #323338;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Товары */
+
+.japanese-goods {
+  padding-top: 30px;
+}
+
+.japanese-goods-item {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.japanese-goods-item__text {
+  padding: 40px 0;
+  font-size: 13.5px;
+}
+
+.japanese-goods-item__title {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.japanese-goods-item__link {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #323338;
+}
+
+.japanese-goods-item__link:hover {
+  color: #db001b;
+}
+
+/* Преимущества */
+
+.japanese-benefits {
+  padding: 20px 0;
+  background-color: #f4d219;
+}
+
+.japanese-benefits-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.japanese-benefits-item--parts:before {
+  content: url(/img/feature-parts.svg);
+  margin-left: -30px;
+  margin-right: 15px;
+}
+
+.japanese-benefits-item--delivery:before {
+  content: url(/img/feature-delivery.svg);
+  margin-left: -30px;
+  margin-right: 15px;
+}
+
+.japanese-benefits-item--warranty:before {
+  content: url(/img/feature-warranty.svg);
+  margin-left: -30px;
+  margin-right: 15px;
+}
+
+.japanese-benefits-item__title {
+  display: block;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* Секции с каруселью */
+
+.japanese-collection {
+  padding: 40px 0;
+}
+
+.japanese-collection__heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: space-between;
+}
+
+.japanese-collection-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Отступы между слайдами */
+
+.slick-slide {
+  margin: 0 15px;
+}
+
+.slick-list {
+  margin: 0 -15px;
+}
+
+.japanese-collection-item:hover,
+.japanese-collection-item:focus {
+  outline: 0;
+}
+
+.japanese-collection-item__text {
+  padding: 20px 20px 40px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.japanese-collection-item__title {
+  display: block;
+  margin-top: 19px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.japanese-collection-item__badge {
+  color: #91a7b3;
+  font-size: 12px;
+}
+
+.japanese-collection-item__link {
+  color: #8598a2;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px dashed #8598a2;
+  transition: color 0.2s;
+}
+
+.japanese-collection-item__link:hover {
+  color: #db001b;
+  border-bottom: none;
+}
+
+/* Блок с картой и каталогом */
+
+.japanese-cards {
+  padding: 25px 0;
+}
+
+.japanese-cards-item__text {
+  padding: 55px 0 55px 50px;
+}
+
+.japanese-cards-item__title {
+  display: block;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+
+.japanese-cards-item__button {
+  position: relative;
+  top: 20px;
+  padding: 12px 19px;
+  border: 2px solid #db001b;
+  border-radius: 3px;
+  color: #db001b;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.japanese-cards-item__button:hover {
+  background-color: #db001b;
+  color: #fff;
+}
+
+.japanese-cards-item__img {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.japanese-cards-item--card .japanese-cards-item__img {
+  background-image: url(/img/card.png);
+}
+
+.japanese-cards-item--catalogue  .japanese-cards-item__img {
+  background-image: url(/img/catalogue.png);
+}
+
+/* Вопросы */
+
+.japanese-questions {
+  background-color: #f4d219;
+  text-align: center;
+}
+
+.japanese-questions__wrapper {
+  padding: 40px 0;
+}
+
+.japanese-questions__text {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.japanese-questions__button {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 3px;
+  background-color: #db001b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.japanese-questions__button:hover {
+  background-color: #b60118;
+  color: #fff;
+}
+
+/* Футер */
+
+.japanese-footer {
+  padding: 60px 0;
+  background-color: #323338;
+}
+
+.japanese-footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.japanese-footer-menu__link,
+.japanese-footer-menu__title {
+  color: #fff;
+}
+
+.japanese-footer-menu__title {
+  display: block;
+  margin-bottom: 19px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.japanese-footer-menu .japanese-footer-menu__link {
+  padding: 0;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.japanese-footer-menu__item:not(:last-of-type) .japanese-footer-menu__link {
+  margin-bottom: 17px;
+}
+
+.japanese-footer-menu__link:hover,
+.japanese-footer-menu__link:focus {
+  color: #f4d219;
+}
+
+.japanese-footer-menu-social__link,
+.japanese-footer-menu-payment__link {
+  display: block;
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.2s;
+}
+
+.japanese-footer-menu-social__link--fb {
+  background-image: url(/img/fb.svg);
+}
+
+.japanese-footer-menu-social__link--fb:hover {
+  background-image: url(/img/fb-hover.svg);
+}
+
+.japanese-footer-menu-social__link--vk {
+  background-image: url(/img/vk.svg);
+}
+
+.japanese-footer-menu-social__link--vk:hover {
+  background-image: url(/img/vk-hover.svg);
+}
+
+.japanese-footer-menu-remarks,
+.japanese-footer-menu-payment {
+  text-align: right;
+}
+
+.japanese-footer-menu-remarks__button {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 3px;
+  background-color: #f4d219;;
+  color: #323338;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.japanese-footer-menu-remarks__button:hover,
+.japanese-footer-menu-remarks__button:focus {
+  color: #323338;
+  background-color: #fdc70c;
+}
+
+.japanese-footer-menu-payment__title {
+  display: block;
+  margin-top: 42px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.japanese-footer-menu-payment__item {
+  width: 50px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.japanese-footer-menu-payment__item:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+.japanese-footer-menu-payment .japanese-footer-menu-payment__link {
+  display: block;
+  padding: 14px 6px;
+  width: 100%;
+  height: 100%;
+  background-size: 70%;
+}
+
+.japanese-footer-menu-payment__link--visa {
+  background-image: url(/img/icon-visa.png)
+}
+
+.japanese-footer-menu-payment__link--mastercard {
+    background-image: url(/img/icon-mastercard.png)
+}
+
+.japanese-footer-menu-payment__link--maestro {
+    background-image: url(/img/icon-maestro.png)
+}
+
+.japanese-footer-menu-payment__link--qiwi {
+    background-image: url(/img/icon-qiwi.png)
+}
+
+.japanese-footer-menu-payment__link--world {
+    background-image: url(/img/icon-world.png)
+}
+
+/* Копирайт */
+
+.japanese-copyright {
+  padding: 16px 0;
+  background-color: #26272b;
+  color: #7c848b;
+  font-size: 12px;
+}
+
+.japanese-copyright__author {
+  display: block;
+  text-align: right;
+}
+
+.japanese-copyright__author--dashed {
+  color: #7c848b;
+  border-bottom: 1px dashed #7c848b;
+}
+
+@media screen and (min-width: 1170px) {
+  .japanese-goods-item {
+    height: 232px;
+  }
+  .japanese-goods-item__img--engine {
+    transform: translateY(10px);
+  }
+  
+  .japanese-goods-item__img--carcass {
+    transform: scale(2) translate(-30%, 35%);
+  }
+  .japanese-questions__text {
+    margin-right: -70px;
+  }
+  .japanese-questions__button {
+    margin-left: -70px;
+  }
+  .japanese-footer-menu-social {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .japanese-goods-item {
+    height: auto;
+  }
+  .japanese-goods-item__img {
+    height: 216px;
+  }
+  .japanese-goods-item__img:after {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+  .japanese-goods-item__text {
+    padding-left: 25px;
+    padding-top: 0;
+  }
+  .japanese-benefits-item--delivery:before {
+    margin-left: -45px;
+  }
+  .japanese-cards-item {
+    padding-bottom: 55px;
+    background-repeat: no-repeat;
+    background-position: calc(100% + 10px) bottom;
+  }
+  .japanese-cards-item--card {
+    background-image: url(/img/card.png);
+    background-size: 50% auto;
+  }
+  .japanese-cards-item--catalogue {
+    background-image: url(/img/catalogue.png);
+    background-size: 40% auto;
+  }
+  .japanese-cards-item__text {
+    padding-left: 19px;
+  }
+  .japanese-collection-item__title {
+    min-height: 72px;
+  }
+  .japanese-questions__text {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .japanese-footer-menu {
+    justify-content: space-around;
+  }
+  .japanese-footer-menu__divider {
+    max-width: 615px;
+    margin-top: 25px;
+    border-bottom: 1px solid #26272b;
+  }
+  .japanese-footer-menu__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-top: 40px;
+  }
+  .japanese-footer-menu-payment__title {
+    margin-top: 0;
+  }
+  .japanese-footer-menu-remarks {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .japanese-footer-menu-payment {
+    padding-right: 20px;
+  }
+  .japanese-footer-menu-social {
+    padding-top: 40px;
+    padding-left: 60px;
+  }
+  .japanese-copyright {
+    padding: 16px 60px;
+  }
+}
