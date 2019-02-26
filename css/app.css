@@ -53,10 +53,6 @@ section {
   margin-top: 32px;
 }
 
-select {
-  max-width: 100%;
-}
-
 /* Мобильное меню */
 
 .hamburger,
@@ -83,7 +79,7 @@ select {
 .close-button__icon {
   display: block;
   height: 100%;
-  background-image: url(/img/icon-close.svg);
+  background-image: url(../img/icon-close.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -150,9 +146,9 @@ select {
 .japanese-menu-mobile .is-accordion-submenu-parent[aria-expanded="false"] > .japanese-header-menu__link:after {
   content: '\203A';
   position: absolute;
-  right: 22px;
+  right: 23px;
   color: #9baeb8;
-  font-size: 23px;
+  font-size: 25px;
   transform: rotate(90deg);
   transition: transform 0.4s;
 }
@@ -160,9 +156,9 @@ select {
 .japanese-menu-mobile .is-accordion-submenu-parent[aria-expanded="true"] > .japanese-header-menu__link:after {
   content: '\203A';
   position: absolute;
-  right: 25px;
+  right: 27px;
   color: #db001b;
-  font-size: 23px;
+  font-size: 25px;
   transform: rotate(-90deg);
   transition: transform 0.4s;
 }
@@ -206,7 +202,6 @@ select {
 }
 
 .japanese-header-menu__item .menu {
-  width: 235px;
   padding: 0;
   transform: translateY(3px);
 }
@@ -258,34 +253,34 @@ select {
 
 .japanese-header-menu__link.japanese-header-menu__link--region {
   padding: 15px 10px;
-  background-image: url(/img/icon-arrow.png);
+  background-image: url(../img/icon-arrow.png);
   background-position: 100% center;
   background-size: 10px 6px;
   font-size: 14px;
 }
 
 .japanese-header-menu__link--delivery:before {
-  content: url(/img/icon-delivery.svg);
+  content: url(../img/icon-delivery.svg);
 }
 
 .japanese-header-menu__link--tech:before {
-  content: url(/img/icon-tech.svg);
+  content: url(../img/icon-tech.svg);
 }
 
 .japanese-header-menu__link--faq:before {
-  content: url(/img/icon-faq.svg);
+  content: url(../img/icon-faq.svg);
 }
 
 .japanese-header-menu__link--contacts:before {
-  content: url(/img/icon-contacts.svg);
+  content: url(../img/icon-contacts.svg);
 }
 
 .japanese-header-menu__link--sign-up:before {
-  content: url(/img/icon-sign-up.svg);
+  content: url(../img/icon-sign-up.svg);
 }
 
 .japanese-header-menu__link--sign-in:before {
-  content: url(/img/icon-sign-in.svg);
+  content: url(../img/icon-sign-in.svg);
 }
 
 .japanese-header-menu__link.japanese-header-menu__link--login {
@@ -308,7 +303,7 @@ select {
 }
 
 .japanese-header-main-contacts:before {
-  content: url(/img/icon-phone.svg);
+  content: url(../img/icon-phone.svg);
   position: absolute;
   left: -20px;
   top: 16px;
@@ -354,7 +349,7 @@ select {
 }
 
 .japanese-header-main-cart__link:before {
-  content: url(/img/icon-cart.svg);
+  content: url(../img/icon-cart.svg);
   margin-right: 11px;
 }
 
@@ -605,19 +600,19 @@ select {
 }
 
 .japanese-benefits-item--parts:before {
-  content: url(/img/feature-parts.svg);
+  content: url(../img/feature-parts.svg);
   margin-left: -30px;
   margin-right: 15px;
 }
 
 .japanese-benefits-item--delivery:before {
-  content: url(/img/feature-delivery.svg);
+  content: url(../img/feature-delivery.svg);
   margin-left: -30px;
   margin-right: 15px;
 }
 
 .japanese-benefits-item--warranty:before {
-  content: url(/img/feature-warranty.svg);
+  content: url(../img/feature-warranty.svg);
   margin-left: -30px;
   margin-right: 15px;
 }
@@ -737,11 +732,11 @@ select {
 }
 
 .japanese-cards-item--card .japanese-cards-item__img {
-  background-image: url(/img/card.png);
+  background-image: url(../img/card.png);
 }
 
 .japanese-cards-item--catalogue  .japanese-cards-item__img {
-  background-image: url(/img/catalogue.png);
+  background-image: url(../img/catalogue.png);
 }
 
 /* Вопросы */
@@ -830,19 +825,19 @@ select {
 }
 
 .japanese-footer-menu-social__link--fb {
-  background-image: url(/img/fb.svg);
+  background-image: url(../img/fb.svg);
 }
 
 .japanese-footer-menu-social__link--fb:hover {
-  background-image: url(/img/fb-hover.svg);
+  background-image: url(../img/fb-hover.svg);
 }
 
 .japanese-footer-menu-social__link--vk {
-  background-image: url(/img/vk.svg);
+  background-image: url(../img/vk.svg);
 }
 
 .japanese-footer-menu-social__link--vk:hover {
-  background-image: url(/img/vk-hover.svg);
+  background-image: url(../img/vk-hover.svg);
 }
 
 .japanese-footer-menu-remarks,
@@ -895,23 +890,23 @@ select {
 }
 
 .japanese-footer-menu-payment__link--visa {
-  background-image: url(/img/icon-visa.png)
+  background-image: url(../img/icon-visa.png)
 }
 
 .japanese-footer-menu-payment__link--mastercard {
-    background-image: url(/img/icon-mastercard.png)
+    background-image: url(../img/icon-mastercard.png)
 }
 
 .japanese-footer-menu-payment__link--maestro {
-    background-image: url(/img/icon-maestro.png)
+    background-image: url(../img/icon-maestro.png)
 }
 
 .japanese-footer-menu-payment__link--qiwi {
-    background-image: url(/img/icon-qiwi.png)
+    background-image: url(../img/icon-qiwi.png)
 }
 
 .japanese-footer-menu-payment__link--world {
-    background-image: url(/img/icon-world.png)
+    background-image: url(../img/icon-world.png)
 }
 
 /* Копирайт */
@@ -934,6 +929,20 @@ select {
 }
 
 @media screen and (min-width: 1170px) {
+  .japanese-header-menu__item:nth-of-type(2) .menu {
+    min-width: 100%;
+    width: 100%;
+  }
+  .japanese-header-menu__item:nth-of-type(3) .menu {
+    width: 205px;
+  }
+  .japanese-header-menu__item:nth-of-type(4) .menu {
+    min-width: 100%;
+    width: 165px;
+  }
+  .japanese-header-menu__item:nth-of-type(5) .menu {
+    width: 235px;
+  }
   .dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a::after {
     display: none;
   }
@@ -979,6 +988,9 @@ select {
     padding-left: 25px;
     padding-top: 0;
   }
+  .japanese-collection-item__img img {
+    width: 100%;
+  }
   .japanese-benefits-item--delivery:before {
     margin-left: -45px;
   }
@@ -988,11 +1000,11 @@ select {
     background-position: calc(100% + 10px) bottom;
   }
   .japanese-cards-item--card {
-    background-image: url(/img/card.png);
+    background-image: url(../img/card.png);
     background-size: 50% auto;
   }
   .japanese-cards-item--catalogue {
-    background-image: url(/img/catalogue.png);
+    background-image: url(../img/catalogue.png);
     background-size: 40% auto;
   }
   .japanese-cards-item__text {
@@ -1035,5 +1047,78 @@ select {
   }
   .japanese-copyright {
     padding: 16px 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-bar .top-bar-right {
+    flex-basis: auto;
+  }
+  .japanese-header-menu__link.japanese-header-menu__link--login {
+    padding: 15px 20px;
+  }
+  .japanese-header-menu__link--login:before {
+    margin-right: 0;
+    transform: scale(1.5);
+  }
+  .japanese-header-menu__link--login span {
+    display: none;
+  }
+  .japanese-header-main .japanese-header-main-contacts {
+    padding-left: 0;
+  }
+  .japanese-header-main .japanese-header-main-contacts:before,
+  .japanese-header-main-cart__sum:after {
+    display: none;
+  }
+  .japanese-header-main-cart .japanese-header-main-cart__link {
+    padding-right: 0;
+    margin-right: -5px;
+  }
+  .japanese-header-main-cart__sum {
+    margin-left: 0;
+  }
+  .japanese-header-main-cart__count {
+    margin-right: 35px;
+  }
+  .japanese-goods-item__img {
+    width: 100%;
+    height: auto;
+  }
+  .japanese-goods-item__img--engine,
+  .japanese-goods-item__img--transmission {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .japanese-collection-item__title {
+    min-height: auto;
+  }
+  .japanese-cards-item__text {
+    padding-bottom: 100px;
+  }
+  .japanese-copyright {
+    padding: 16px 30px; 
+  }
+  .japanese-footer-menu__wrapper {
+    flex-wrap: wrap;
+  }
+  .japanese-footer-menu-remarks, 
+  .japanese-footer-menu-payment,
+  .japanese-footer-menu-social,
+  .japanese-copyright__company,
+  .japanese-copyright__author {
+    text-align: center;
+    padding: 0;
+  }
+  .japanese-footer-menu-payment {
+    margin: 50px 0;
+  }
+  .japanese-footer-menu-social .menu {
+    justify-content: center;
+  }
+  .japanese-copyright__company {
+    display: block;
+    margin-bottom: 5px;
   }
 }
