@@ -53,6 +53,130 @@ section {
   margin-top: 32px;
 }
 
+select {
+  max-width: 100%;
+}
+
+/* Мобильное меню */
+
+.hamburger,
+.hamburger:hover,
+.hamburger:focus {
+  background-color: transparent;
+  margin: 0;
+  outline: 0;
+}
+
+.hamburger:after {
+  height: 4px;
+  background: #323338;
+  -webkit-box-shadow: 0 8px 0 #323338, 0 16px 0 #323338;
+  box-shadow: 0 8px 0 #323338, 0 16px 0 #323338;
+}
+
+.close-button {
+  position: static;
+  width: 20px;
+  height: 20px;
+}
+
+.close-button__icon {
+  display: block;
+  height: 100%;
+  background-image: url(/img/icon-close.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.japanese-menu-mobile {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+}
+
+.japanese-menu-mobile__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 20px;
+  border: 1px solid #e4eaed;
+  background-color: #f3f6f8;
+}
+
+.japanese-menu-mobile__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #323338;
+}
+
+.japanese-menu-mobile .japanese-header-menu {
+  display: flex;
+}
+
+.japanese-menu-mobile .japanese-header-menu__item .japanese-header-menu__link {
+  padding: 19px 22px;
+  font-size: 14px;
+}
+
+.japanese-menu-mobile .japanese-header-menu__item .menu {
+  width: 100%;
+  padding: 22px 44px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.japanese-menu-mobile .japanese-header-menu__item .menu .japanese-header-menu__link {
+  padding: 7px 0;
+}
+
+.japanese-menu-mobile .japanese-header-menu__item .menu {
+  position: relative;
+  box-shadow: none;
+}
+
+.japanese-menu-mobile .japanese-header-menu__item .menu:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #e4eaed;
+}
+
+.japanese-menu-mobile .is-accordion-submenu-parent[aria-expanded="false"] > .japanese-header-menu__link:after {
+  content: '\203A';
+  position: absolute;
+  right: 22px;
+  color: #9baeb8;
+  font-size: 23px;
+  transform: rotate(90deg);
+  transition: transform 0.4s;
+}
+
+.japanese-menu-mobile .is-accordion-submenu-parent[aria-expanded="true"] > .japanese-header-menu__link:after {
+  content: '\203A';
+  position: absolute;
+  right: 25px;
+  color: #db001b;
+  font-size: 23px;
+  transform: rotate(-90deg);
+  transition: transform 0.4s;
+}
+
+.japanese-menu-mobile .japanese-header-main-contacts {
+  padding: 32px 0 32px 45px;
+}
+
+.japanese-menu-mobile .japanese-header-main-contacts:before {
+  left: 15px;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
 /* Меню в хэдере */
 .japanese-header-menu__background {
   background-color: #f3f6f8;
@@ -63,6 +187,16 @@ section {
   display: inline-flex;
   min-height: 45px;
   font-size: 12px;
+  align-items: stretch;
+}
+
+.japanese-header-menu__item {
+  transition: all 0.2s;
+}
+
+.japanese-header-menu__item:hover {
+  background-color: rgb(243, 246, 248);
+  box-shadow: inset 0px 0px 10px 0px rgba(192, 203, 209, 0.45);
 }
 
 .japanese-header-menu__wrapper,
@@ -72,9 +206,13 @@ section {
 }
 
 .japanese-header-menu__item .menu {
-  min-width: 100%;
+  width: 235px;
   padding: 0;
-  transform: translateY(9px);
+  transform: translateY(3px);
+}
+
+.japanese-header-menu__item .menu > li {
+  font-size: 14px;
 }
 
 .japanese-header-menu__item .menu {
@@ -86,6 +224,12 @@ section {
   background-color: #fff;
   justify-content: flex-start;
   padding: 7px 16px;
+  transition: all 0.2s;
+}
+
+.dropdown.menu > li.is-active > a,
+.japanese-header-menu__item .japanese-header-menu__link:not(.japanese-header-menu__link--region):hover {
+  color: #db001b;
 }
 
 .japanese-header-menu__item--border {
@@ -110,10 +254,6 @@ section {
 .japanese-header-menu__link:before {
   display: block;
   margin-right: 5px;
-}
-
-.japanese-header-menu__link:after {
-  display: none !important;
 }
 
 .japanese-header-menu__link.japanese-header-menu__link--region {
@@ -794,13 +934,18 @@ section {
 }
 
 @media screen and (min-width: 1170px) {
+  .dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a::after {
+    display: none;
+  }
   .japanese-goods-item {
     height: 232px;
   }
   .japanese-goods-item__img--engine {
     transform: translateY(10px);
   }
-  
+  .japanese-goods-item__text {
+    margin-left: -30px;
+  }
   .japanese-goods-item__img--carcass {
     transform: scale(2) translate(-30%, 35%);
   }
@@ -816,6 +961,9 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  .japanese-header-menu .japanese-header-menu__link {
+    justify-content: flex-start;
+  }
   .japanese-goods-item {
     height: auto;
   }

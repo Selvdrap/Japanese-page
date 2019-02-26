@@ -11,16 +11,107 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+  <div class="reveal japanese-menu-mobile" id="exampleModal1" data-reveal data-v-offset="0">
+    <div class="japanese-menu-mobile__header">
+      <span class="japanese-menu-mobile__title">Меню</span>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span class="close-button__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <ul class="menu vertical align-middle japanese-header-menu accordeon" data-accordion-menu>
+      <li class="japanese-header-menu__item japanese-header-menu__item--border">
+        <select class="japanese-header-menu__link japanese-header-menu__link--region expand" name="region">
+          <option value="Краснодарский край">
+            Краснодарский край
+          </option>
+          <option value="Краснодарский край">
+            Московская область
+          </option>
+          <option value="Краснодарский край">
+            Ленинградская область
+          </option>
+          <option value="Краснодарский край">
+            Кемеровская область
+          </option>
+        </select>
+      </li>
+      <li class="japanese-header-menu__item">
+        <a class="japanese-header-menu__link japanese-header-menu__link--delivery" href="#">Доставка и оплата</a>
+        <ul class="menu">
+          <li>
+            <a class="japanese-header-menu__link" href="#">Доставка</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Возврат</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Оплата</a>
+          </li>
+        </ul>
+      </li>
+      <li class="japanese-header-menu__item">
+        <a class="japanese-header-menu__link japanese-header-menu__link--tech" href="#">Техцентр</a>
+        <ul class="menu">
+          <li>
+            <a class="japanese-header-menu__link" href="#">Техцентр</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Гарантийная политика</a>
+          </li>
+        </ul>
+      </li>
+      <li class="japanese-header-menu__item">
+        <a class="japanese-header-menu__link japanese-header-menu__link--faq" href="#">О компании</a>
+        <ul class="menu">
+          <li>
+            <a class="japanese-header-menu__link" href="#">О нас</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Вакансии</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Карта покупателя</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Отзывы</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Новости</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Партнерам</a>
+          </li>
+        </ul>
+      </li>
+      <li class="japanese-header-menu__item">
+        <a class="japanese-header-menu__link japanese-header-menu__link--contacts" href="#">Контакты</a>
+        <ul class="menu">
+          <li>
+            <a class="japanese-header-menu__link" href="#">Магазины</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Техцентры</a>
+          </li>
+          <li>
+            <a class="japanese-header-menu__link" href="#">Региональные менеджеры</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="japanese-header-main-contacts">
+      <a class="japanese-header-main-contacts__phone" href="tel:88005555555">8 800 555 55 55</a>
+      <span class="japanese-header-main-contacts__free">Бесплатно по России</span>
+    </div>
+  </div>
+
   <header class="japanese-header">
     <div class="japanese-header-menu__background">
       <div class="row">
         <div class="columns small-12">
-          <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="large">
-            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-          </div>
           <div class="top-bar japanese-header-menu__wrapper">
-            <div class="top-bar-left">
-              <ul class="menu vertical large-horizontal align-middle japanese-header-menu dropdown" id="example-menu" data-dropdown-menu>
+            <button class="button menu-icon hide-for-large hamburger" data-open="exampleModal1"></button>
+            <div class="top-bar-left show-for-large">
+              <ul class="menu vertical large-horizontal align-middle japanese-header-menu dropdown" data-dropdown-menu>
                 <li class="japanese-header-menu__item japanese-header-menu__item--border">
                   <select class="japanese-header-menu__link japanese-header-menu__link--region" name="region">
                     <option value="Краснодарский край">
