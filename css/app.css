@@ -1376,6 +1376,9 @@ section {
     display: block;
     margin-bottom: 5px;
   }
+  .japanese-header-main-contacts__phone {
+    font-size: 20px;
+  }
 }
 
 @media screen and (width: 320px) {
