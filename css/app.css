@@ -1170,6 +1170,9 @@ section {
   .sticky {
     position: static !important;
   }
+  .sticky-container {
+    z-index: 600;
+  }
 }
 
 @media screen and (max-width: 768px) {
