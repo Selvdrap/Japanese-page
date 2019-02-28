@@ -111,6 +111,8 @@
             label_text = getSelectedAsText(this.find(":selected"), o);
             var label = $("<span class='gentleselect-label'>" + label_text + "</span>")
                 .insertBefore(this)
+                .bind("mouseenter.gentleselect", event_handlers.labelHoverIn)
+                .bind("mouseleave.gentleselect", event_handlers.labelHoverOut)
                 .bind("click.gentleselect", event_handlers.labelClick)
                 .data("root", this);
             this.data("label", label)
@@ -212,6 +214,14 @@
 
     var event_handlers = {
 
+        labelHoverIn : function() { 
+            $(this).addClass('gentleselect-label-highlight'); 
+        },
+
+        labelHoverOut : function() { 
+            $(this).removeClass('gentleselect-label-highlight'); 
+        },
+
         labelClick : function() {
             var $this = $(this);
             var pos = $this.position();
@@ -225,10 +235,6 @@
             } else {
                 dialog.slideDown(opts.openSpeed);
             }
-            if ($this.hasClass("gentleselect-label-highlight")) {
-                dialog.hide();
-            }
-            $this.toggleClass('gentleselect-label-highlight');
         },
     
         dialogHoverOut : function() {
@@ -236,7 +242,6 @@
             if ($this.data("root").data("options").hideOnMouseOut) {
                 $this.hide();
             }
-            $this.data("label").removeClass('gentleselect-label-highlight');
         },
 
         dialogClick : function(e) {

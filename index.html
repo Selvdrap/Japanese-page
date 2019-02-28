@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="js/vendor/slick/slick.css">
     <link rel="stylesheet" href="js/vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="js/vendor/gentleSelect/jquery-gentleSelect.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -20,7 +21,7 @@
     </div>
     <ul class="menu vertical align-middle japanese-header-menu accordeon" data-accordion-menu>
       <li class="japanese-header-menu__item japanese-header-menu__item--border">
-        <select class="japanese-header-menu__link japanese-header-menu__link--region expand" name="region">
+        <select class="japanese-header-menu__link japanese-header-menu__link--region" name="region">
           <option value="Краснодарский край">
             Краснодарский край
           </option>
@@ -105,108 +106,110 @@
   </div>
 
   <header class="japanese-header">
-    <div class="japanese-header-menu__background">
-      <div class="row">
-        <div class="columns small-12">
-          <div class="top-bar japanese-header-menu__wrapper">
-            <button class="button menu-icon hide-for-large hamburger" data-open="exampleModal1"></button>
-            <div class="top-bar-left show-for-large">
-              <ul class="menu vertical large-horizontal align-middle japanese-header-menu dropdown" data-dropdown-menu>
-                <li class="japanese-header-menu__item japanese-header-menu__item--border">
-                  <select class="japanese-header-menu__link japanese-header-menu__link--region" name="region">
-                    <option value="Краснодарский край">
-                      Краснодарский край
-                    </option>
-                    <option value="Краснодарский край">
-                      Московская область
-                    </option>
-                    <option value="Краснодарский край">
-                      Ленинградская область
-                    </option>
-                    <option value="Краснодарский край">
-                      Кемеровская область
-                    </option>
-                  </select>
-                </li>
-                <li class="japanese-header-menu__item">
-                  <a class="japanese-header-menu__link japanese-header-menu__link--delivery" href="#">Доставка и оплата</a>
-                  <ul class="menu">
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Доставка</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Возврат</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Оплата</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="japanese-header-menu__item">
-                  <a class="japanese-header-menu__link japanese-header-menu__link--tech" href="#">Техцентр</a>
-                  <ul class="menu">
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Техцентр</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Гарантийная политика</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="japanese-header-menu__item">
-                  <a class="japanese-header-menu__link japanese-header-menu__link--faq" href="#">О компании</a>
-                  <ul class="menu">
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">О нас</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Вакансии</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Карта покупателя</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Отзывы</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Новости</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Партнерам</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="japanese-header-menu__item">
-                  <a class="japanese-header-menu__link japanese-header-menu__link--contacts" href="#">Контакты</a>
-                  <ul class="menu">
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Магазины</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Техцентры</a>
-                    </li>
-                    <li>
-                      <a class="japanese-header-menu__link" href="#">Региональные менеджеры</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="top-bar-right">
-              <ul class="menu align-middle japanese-header-menu">
-                <li class="japanese-header-menu__item show-for-small-only">
-                  <div class="japanese-header-main-cart">
-                    <a class="japanese-header-main-cart__link" href="#"></a>
-                    <div class="japanese-header-main-cart__sum"><span class="japanese-header-main-cart__count">10</span></div>
-                  </div>
-                </li>
-                <li class="japanese-header-menu__item show-for-medium">
-                  <a class="japanese-header-menu__link japanese-header-menu__link--sign-up" href="#">Регистрация</a>
-                </li>
-                <li class="japanese-header-menu__item">
-                  <a class="japanese-header-menu__link japanese-header-menu__link--sign-in japanese-header-menu__link--login" href="#"><span>Вход</span></a>
-                </li>
-              </ul>
+    <div data-sticky-container>
+      <div class="japanese-header-menu__background" data-sticky data-options="marginTop:0;" data-sticky-on="medium" style="width:100%">
+        <div class="row">
+          <div class="columns small-12">
+            <div class="top-bar japanese-header-menu__wrapper">
+              <button class="button menu-icon hide-for-large hamburger" data-open="exampleModal1"></button>
+              <div class="top-bar-left show-for-large">
+                <ul class="menu vertical large-horizontal align-middle japanese-header-menu dropdown" data-dropdown-menu>
+                  <li class="japanese-header-menu__item japanese-header-menu__item--border">
+                    <select class="japanese-header-menu__link japanese-header-menu__link--region japanese-select--region" name="region">
+                      <option value="Краснодарский край">
+                        Краснодарский край
+                      </option>
+                      <option value="Краснодарский край">
+                        Московская область
+                      </option>
+                      <option value="Краснодарский край">
+                        Ленинградская область
+                      </option>
+                      <option value="Краснодарский край">
+                        Кемеровская область
+                      </option>
+                    </select>
+                  </li>
+                  <li class="japanese-header-menu__item">
+                    <a class="japanese-header-menu__link japanese-header-menu__link--delivery" href="#">Доставка и оплата</a>
+                    <ul class="menu">
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Доставка</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Возврат</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Оплата</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="japanese-header-menu__item">
+                    <a class="japanese-header-menu__link japanese-header-menu__link--tech" href="#">Техцентр</a>
+                    <ul class="menu">
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Техцентр</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Гарантийная политика</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="japanese-header-menu__item">
+                    <a class="japanese-header-menu__link japanese-header-menu__link--faq" href="#">О компании</a>
+                    <ul class="menu">
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">О нас</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Вакансии</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Карта покупателя</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Отзывы</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Новости</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Партнерам</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="japanese-header-menu__item">
+                    <a class="japanese-header-menu__link japanese-header-menu__link--contacts" href="#">Контакты</a>
+                    <ul class="menu">
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Магазины</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Техцентры</a>
+                      </li>
+                      <li>
+                        <a class="japanese-header-menu__link" href="#">Региональные менеджеры</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-bar-right">
+                <ul class="menu align-middle japanese-header-menu">
+                  <li class="japanese-header-menu__item show-for-small-only">
+                    <div class="japanese-header-main-cart">
+                      <a class="japanese-header-main-cart__link" href="#"></a>
+                      <div class="japanese-header-main-cart__sum"><span class="japanese-header-main-cart__count">10</span></div>
+                    </div>
+                  </li>
+                  <li class="japanese-header-menu__item show-for-medium">
+                    <a class="japanese-header-menu__link japanese-header-menu__link--sign-up" href="#">Регистрация</a>
+                  </li>
+                  <li class="japanese-header-menu__item">
+                    <a class="japanese-header-menu__link japanese-header-menu__link--sign-in japanese-header-menu__link--login" href="#"><span>Вход</span></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -214,12 +217,12 @@
     </div>
     <div class="japanese-header-main">
       <div class="row align-middle">
-        <div class="columns small-6 large-2">
+        <div class="columns small-6 medium-4 large-2">
             <a class="japanese-logo" href="#">
               <img src="/img/logo.png" alt="" width="169" height="66">
             </a>
         </div>
-        <div class="columns small-6 large-3 large-offset-1">
+        <div class="columns small-6 medium-4 large-3 large-offset-1">
           <div class="japanese-header-main-contacts">
             <a class="japanese-header-main-contacts__phone" href="tel:88005555555">8 800 555 55 55</a>
             <span class="japanese-header-main-contacts__free">Бесплатно по России</span>
@@ -234,6 +237,16 @@
       </div>
     </div>
   </header>
+
+  <section class="japanese-search-mobile hide-for-large">
+    <div class="row">
+      <div class="column small-12">
+        <div class="japanese-search-mobile__wrapper">
+          <input type="text" class="japanese-search-mobile__input" placeholder="Поиск по сайту">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="japanese-search">
     <div class="row show-for-large">
@@ -264,166 +277,166 @@
         <div class="tabs-content" data-tabs-content="tabs">
           <div class="tabs-panel is-active" id="panel1d">
             <div class="input-group">
-              <button class="button japanese-search-dropdown__button" type="button" data-toggle="brand-dropdown">Марка</button>
-              <div class="dropdown-pane dropdown-brand" id="brand-dropdown" data-dropdown data-auto-focus="true">
-                <div class="japanese-search-dropdown">
-                  <ul class="japanese-search-dropdown__list japanese-search-dropdown__list--popular">
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">honda</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">Mazda</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">Mitsubishi</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">nissan</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">subaru</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">suzuki</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">toyota</a>
-                    </li>
-                  </ul>
-                  <ul class="japanese-search-dropdown__list">
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">audi</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">bmw</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">cadillac</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">caterpillar</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">chevrolet</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">chrysler</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">citroen</a>
-                    </li>
-                  </ul>
-                  <ul class="japanese-search-dropdown__list">
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">crysler</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">daewoo</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">daihatsu</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">dodge</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">fiat</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">ford</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">hino</a>
-                    </li>
-                  </ul>
-                  <ul class="japanese-search-dropdown__list">
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">hyundai</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">infiniti</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">isuzu</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">jaguar</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">jeep</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">kia</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">land rover</a>
-                    </li>
-                  </ul>
-                  <ul class="japanese-search-dropdown__list">
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">lexus</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">Mercedes</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">Mini</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">mitsuoka</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">opel</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">peugeot</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">pontiac</a>
-                    </li>
-                  </ul>
-                  <ul class="japanese-search-dropdown__list">
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">porsche</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">renault</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">saab</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">scion</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">seat</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">skoda</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">ssangyong</a>
-                    </li>
-                  </ul>
-                  <ul class="japanese-search-dropdown__list">
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">volkswagen</a>
-                    </li>
-                    <li class="japanese-searh-dropdown__item">
-                      <a href="#" class="japanese-search-dropdown__link">volvo</a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="dropdown-input dropdown-brand japanese-search-input japanese-search-input--first">
+                <select class="japanese-select--brand" name="brand" multiple='multiple'>
+                  <option value="honda">honda</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="nissan">nissan</option>
+                  <option value="subaru">subaru</option>
+                  <option value="suzuki">suzuki</option>
+                  <option value="toyota">toyota</option>
+                  <option value="audi">audi</option>
+                  <option value="bmw">bmw</option>
+                  <option value="cadillac">cadillac</option>
+                  <option value="caterpillar">caterpillar</option>
+                  <option value="chevrolet">chevrolet</option>
+                  <option value="chrysler">chrysler</option>
+                  <option value="citroen">citroen</option>
+                  <option value="crysler">crysler</option>
+                  <option value="daewoo">daewoo</option>
+                  <option value="daihatsu">daihatsu</option>
+                  <option value="dodge">dodge</option>
+                  <option value="fiat">fiat</option>
+                  <option value="ford">ford</option>
+                  <option value="hino">hino</option>
+                  <option value="hyundai">hyundai</option>
+                  <option value="infiniti">infiniti</option>
+                  <option value="isuzu">isuzu</option>
+                  <option value="jaguar">jaguar</option>
+                  <option value="jeep">jeep</option>
+                  <option value="kia">kia</option>
+                  <option value="land_rover">land rover</option>
+                  <option value="lexus">lexus</option>
+                  <option value="Mercedes">Mercedes</option>
+                  <option value="Mini">Mini</option>
+                  <option value="mitsuoka">mitsuoka</option>
+                  <option value="opel">opel</option>
+                  <option value="peugeot">peugeot</option>
+                  <option value="pontiac">pontiac</option>
+                  <option value="porsche">porsche</option>
+                  <option value="renault">renault</option>
+                  <option value="saab">saab</option>
+                  <option value="scion">scion</option>
+                  <option value="seat">seat</option>
+                  <option value="skoda">skoda</option>
+                  <option value="ssangyong">ssangyong</option>
+                  <option value="volkswagen">volkswagen</option>
+                  <option value="volvo">volvo</option>
+                </select>
               </div>
-              <input class="input-group-field japanese-search-field" type="text" placeholder="Название детали">
-              <button class="button float-left japanese-search-dropdown__button japanese-search-detailed__button" type="button" data-toggle="example-dropdown5"><span class="japanese-search-detailed__text japanese-search-detailed__text--normal">Расширенный поиск</span><span class="japanese-search-detailed__text japanese-search-detailed__text--active">Свернуть поиск</span></button>
+              <input class="input-group-field japanese-search-field japanese-search-input" type="text" placeholder="Название детали">
+              <button class="button float-left japanese-search-dropdown__button japanese-search-detailed__button japanese-search-input japanese-search-input--last" type="button" data-toggle="example-dropdown5"><span class="japanese-search-detailed__text japanese-search-detailed__text--normal">Расширенный поиск</span><span class="japanese-search-detailed__text japanese-search-detailed__text--active">Свернуть поиск</span></button>
               <div class="input-group-button">
                 <input type="submit" class="button japanese-search-submit" value="Поиск">
               </div>
             </div>
             <div class="dropdown-pane bottom japanese-search-detailed__content" id="example-dropdown5" data-dropdown>
-              <div class="input-group">
-                <select name="models" id="model">
+              <div class="input-group extended-search">
+                <div class="dropdown-input japanese-search-input japanese-search-input--model">
+                  <select class="japanese-select--input japanese-select--model" name="models" multiple='multiple'>
+                    <option value="Amarok">Amarok</option>
+                    <option value="Beetle">Beetle</option>
+                    <option value="Bora">Bora</option>
+                    <option value="Caddy">Caddy</option>
+                    <option value="Corrado">Corrado</option>
+                    <option value="Eos">Eos</option>
+                    <option value="Fox">Fox</option>
+                  </select>  
+                </div>
+                <div class="dropdown-input japanese-search-input japanese-search-input--carcass">
+                  <select class="japanese-select--input japanese-select--carcass" name="carcasses" multiple='multiple'>
+                    <option value="all">Все</option>
+                    <option value="137">137</option>
+                    <option value="138">138</option>
+                  </select>  
+                </div> 
+                <div class="dropdown-input japanese-search-input japanese-search-input--engine">
+                  <select class="japanese-select--input japanese-select--engine" name="engines" multiple='multiple'>
+                    <option value="all">Все</option>
+                    <option value="137">137</option>
+                    <option value="138">138</option>
+                  </select>  
+                </div>
+                <div class="dropdown-input japanese-search-input japanese-search-input--location">
+                  <select class="japanese-select--input japanese-select--location" name="locations" multiple='multiple'>
+                    <option value="right">Справа</option>
+                    <option value="left">Слева</option>
+                    <option value="behind">Сзади</option>
+                    <option value="all">Любой</option>
+                    <option value="on">Вверху</option>
+                    <option value="under">Внизу</option>
+                    <option value="in_front">Спереди</option>
+                  </select>  
+                </div>
+                <input class="input-group-field japanese-search-field japanese-search-input" type="text" placeholder="Маркировка">
+                <div class="dropdown-input japanese-search-input japanese-search-input--warehouse">
+                  <select class="japanese-select--input japanese-select--warehouse" name="warehouses" multiple='multiple'>
+                    <option value="Omsk">Омск</option>
+                    <option value="Vladivostok">Владивосток</option>
+                    <option value="Tumen">Тюмень</option>
+                    <option value="Moscow">Москва</option>
+                    <option value="Omsk_on_way">На пути в Омск</option>
+                    <option value="Vladivostok_on_way">На пути во Владивосток</option>
+                  </select>  
+                </div>
+                <input class="input-group-field japanese-search-field japanese-search-input japanese-search-input--last" type="text" placeholder="OEM">
+              </div>
+            </div>
+            <a class="japanese-search__how" href="#">Как пользоваться поиском?</a>
+          </div>
+          <div class="tabs-panel" id="panel2d">
+            <div class="input-group">
+              <div class="dropdown-input dropdown-brand japanese-search-input japanese-search-input--first">
+                <select class="japanese-select--brand" name="brand" multiple='multiple'>
+                  <option value="honda">honda</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="nissan">nissan</option>
+                  <option value="subaru">subaru</option>
+                  <option value="suzuki">suzuki</option>
+                  <option value="toyota">toyota</option>
+                  <option value="audi">audi</option>
+                  <option value="bmw">bmw</option>
+                  <option value="cadillac">cadillac</option>
+                  <option value="caterpillar">caterpillar</option>
+                  <option value="chevrolet">chevrolet</option>
+                  <option value="chrysler">chrysler</option>
+                  <option value="citroen">citroen</option>
+                  <option value="crysler">crysler</option>
+                  <option value="daewoo">daewoo</option>
+                  <option value="daihatsu">daihatsu</option>
+                  <option value="dodge">dodge</option>
+                  <option value="fiat">fiat</option>
+                  <option value="ford">ford</option>
+                  <option value="hino">hino</option>
+                  <option value="hyundai">hyundai</option>
+                  <option value="infiniti">infiniti</option>
+                  <option value="isuzu">isuzu</option>
+                  <option value="jaguar">jaguar</option>
+                  <option value="jeep">jeep</option>
+                  <option value="kia">kia</option>
+                  <option value="land_rover">land rover</option>
+                  <option value="lexus">lexus</option>
+                  <option value="Mercedes">Mercedes</option>
+                  <option value="Mini">Mini</option>
+                  <option value="mitsuoka">mitsuoka</option>
+                  <option value="opel">opel</option>
+                  <option value="peugeot">peugeot</option>
+                  <option value="pontiac">pontiac</option>
+                  <option value="porsche">porsche</option>
+                  <option value="renault">renault</option>
+                  <option value="saab">saab</option>
+                  <option value="scion">scion</option>
+                  <option value="seat">seat</option>
+                  <option value="skoda">skoda</option>
+                  <option value="ssangyong">ssangyong</option>
+                  <option value="volkswagen">volkswagen</option>
+                  <option value="volvo">volvo</option>
+                </select>
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--model">
+                <select class="japanese-select--input japanese-select--model" name="models" multiple='multiple'>
                   <option value="Amarok">Amarok</option>
                   <option value="Beetle">Beetle</option>
                   <option value="Bora">Bora</option>
@@ -431,27 +444,437 @@
                   <option value="Corrado">Corrado</option>
                   <option value="Eos">Eos</option>
                   <option value="Fox">Fox</option>
-                </select>   
-              </div>        
+                </select>  
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--engine">
+                <select class="japanese-select--input japanese-select--engine" name="engines" multiple='multiple'>
+                  <option value="all">Все</option>
+                  <option value="137">137</option>
+                  <option value="138">138</option>
+                </select>  
+              </div>
+              <div class="input-group-field japanese-search-field japanese-search-field--checkbox japanese-search-input">
+                <input type="checkbox" id="engine"><label for="engine">Двигатель</label>
+                <span class="checkmark"></span>
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--warehouse">
+                <select class="japanese-select--input japanese-select--warehouse" name="warehouses" multiple='multiple'>
+                  <option value="Omsk">Омск</option>
+                  <option value="Vladivostok">Владивосток</option>
+                  <option value="Tumen">Тюмень</option>
+                  <option value="Moscow">Москва</option>
+                  <option value="Omsk_on_way">На пути в Омск</option>
+                  <option value="Vladivostok_on_way">На пути во Владивосток</option>
+                </select>  
+              </div>
+              <div class="input-group-field japanese-search-field japanese-search-field--checkbox japanese-search-input">
+                <input type="checkbox" id="dvs"><label for="dvs">ДВС с КПП</label>
+                <span class="checkmark"></span>
+              </div>
+              <input class="input-group-field japanese-search-field japanese-search-input japanese-search-input--last" type="text" disabled>
+              <div class="input-group-button">
+                <input type="submit" class="button japanese-search-submit" value="Поиск">
+              </div>
             </div>
-          </div>
-          <div class="tabs-panel" id="panel2d">
-            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+            <a class="japanese-search__how" href="#">Как пользоваться поиском?</a>
           </div>
           <div class="tabs-panel" id="panel3d">
-
+            <div class="input-group">
+              <div class="dropdown-input dropdown-brand japanese-search-input japanese-search-input--first">
+                <select class="japanese-select--brand" name="brand" multiple='multiple'>
+                  <option value="honda">honda</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="nissan">nissan</option>
+                  <option value="subaru">subaru</option>
+                  <option value="suzuki">suzuki</option>
+                  <option value="toyota">toyota</option>
+                  <option value="audi">audi</option>
+                  <option value="bmw">bmw</option>
+                  <option value="cadillac">cadillac</option>
+                  <option value="caterpillar">caterpillar</option>
+                  <option value="chevrolet">chevrolet</option>
+                  <option value="chrysler">chrysler</option>
+                  <option value="citroen">citroen</option>
+                  <option value="crysler">crysler</option>
+                  <option value="daewoo">daewoo</option>
+                  <option value="daihatsu">daihatsu</option>
+                  <option value="dodge">dodge</option>
+                  <option value="fiat">fiat</option>
+                  <option value="ford">ford</option>
+                  <option value="hino">hino</option>
+                  <option value="hyundai">hyundai</option>
+                  <option value="infiniti">infiniti</option>
+                  <option value="isuzu">isuzu</option>
+                  <option value="jaguar">jaguar</option>
+                  <option value="jeep">jeep</option>
+                  <option value="kia">kia</option>
+                  <option value="land_rover">land rover</option>
+                  <option value="lexus">lexus</option>
+                  <option value="Mercedes">Mercedes</option>
+                  <option value="Mini">Mini</option>
+                  <option value="mitsuoka">mitsuoka</option>
+                  <option value="opel">opel</option>
+                  <option value="peugeot">peugeot</option>
+                  <option value="pontiac">pontiac</option>
+                  <option value="porsche">porsche</option>
+                  <option value="renault">renault</option>
+                  <option value="saab">saab</option>
+                  <option value="scion">scion</option>
+                  <option value="seat">seat</option>
+                  <option value="skoda">skoda</option>
+                  <option value="ssangyong">ssangyong</option>
+                  <option value="volkswagen">volkswagen</option>
+                  <option value="volvo">volvo</option>
+                </select>
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--model">
+                <select class="japanese-select--input japanese-select--model" name="models" multiple='multiple'>
+                  <option value="Amarok">Amarok</option>
+                  <option value="Beetle">Beetle</option>
+                  <option value="Bora">Bora</option>
+                  <option value="Caddy">Caddy</option>
+                  <option value="Corrado">Corrado</option>
+                  <option value="Eos">Eos</option>
+                  <option value="Fox">Fox</option>
+                </select>  
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--engine">
+                <select class="japanese-select--input japanese-select--engine" name="engines" multiple='multiple'>
+                  <option value="all">Все</option>
+                  <option value="137">137</option>
+                  <option value="138">138</option>
+                </select>  
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--warehouse">
+                <select class="japanese-select--input japanese-select--warehouse" name="warehouses" multiple='multiple'>
+                  <option value="Omsk">Омск</option>
+                  <option value="Vladivostok">Владивосток</option>
+                  <option value="Tumen">Тюмень</option>
+                  <option value="Moscow">Москва</option>
+                  <option value="Omsk_on_way">На пути в Омск</option>
+                  <option value="Vladivostok_on_way">На пути во Владивосток</option>
+                </select>  
+              </div>
+              <div class="input-group-field japanese-search-field japanese-search-field--checkbox japanese-search-input">
+                <input type="checkbox" id="akpp"><label for="akpp">АКПП</label>
+                <span class="checkmark"></span>
+              </div>
+              <div class="input-group-field japanese-search-field japanese-search-field--checkbox japanese-search-input">
+                <input type="checkbox" id="mkpp"><label for="mkpp">МКПП</label>
+                <span class="checkmark"></span>
+              </div>
+              <input class="input-group-field japanese-search-field japanese-search-input" type="text" placeholder="Маркировка">
+              <input class="input-group-field japanese-search-field japanese-search-input japanese-search-input--last" type="text" disabled>
+              <div class="input-group-button">
+                <input type="submit" class="button japanese-search-submit" value="Поиск">
+              </div>
+            </div>
+            <a class="japanese-search__how" href="#">Как пользоваться поиском?</a>
           </div>
           <div class="tabs-panel" id="panel4d">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="input-group">
+              <div class="dropdown-input dropdown-brand japanese-search-input japanese-search-input--first">
+                <select class="japanese-select--brand" name="brand" multiple='multiple'>
+                  <option value="honda">honda</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="nissan">nissan</option>
+                  <option value="subaru">subaru</option>
+                  <option value="suzuki">suzuki</option>
+                  <option value="toyota">toyota</option>
+                  <option value="audi">audi</option>
+                  <option value="bmw">bmw</option>
+                  <option value="cadillac">cadillac</option>
+                  <option value="caterpillar">caterpillar</option>
+                  <option value="chevrolet">chevrolet</option>
+                  <option value="chrysler">chrysler</option>
+                  <option value="citroen">citroen</option>
+                  <option value="crysler">crysler</option>
+                  <option value="daewoo">daewoo</option>
+                  <option value="daihatsu">daihatsu</option>
+                  <option value="dodge">dodge</option>
+                  <option value="fiat">fiat</option>
+                  <option value="ford">ford</option>
+                  <option value="hino">hino</option>
+                  <option value="hyundai">hyundai</option>
+                  <option value="infiniti">infiniti</option>
+                  <option value="isuzu">isuzu</option>
+                  <option value="jaguar">jaguar</option>
+                  <option value="jeep">jeep</option>
+                  <option value="kia">kia</option>
+                  <option value="land_rover">land rover</option>
+                  <option value="lexus">lexus</option>
+                  <option value="Mercedes">Mercedes</option>
+                  <option value="Mini">Mini</option>
+                  <option value="mitsuoka">mitsuoka</option>
+                  <option value="opel">opel</option>
+                  <option value="peugeot">peugeot</option>
+                  <option value="pontiac">pontiac</option>
+                  <option value="porsche">porsche</option>
+                  <option value="renault">renault</option>
+                  <option value="saab">saab</option>
+                  <option value="scion">scion</option>
+                  <option value="seat">seat</option>
+                  <option value="skoda">skoda</option>
+                  <option value="ssangyong">ssangyong</option>
+                  <option value="volkswagen">volkswagen</option>
+                  <option value="volvo">volvo</option>
+                </select>
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--radius">
+                <select class="japanese-select--input japanese-select--radius" name="radius" multiple='multiple'>
+                  <option value="all">Все</option>
+                  <option value="r-12">R-12</option>
+                  <option value="r-13">R-13</option>
+                </select>  
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--width">
+                <select class="japanese-select--input japanese-select--width" name="width" multiple='multiple'>
+                  <option value="all">Все</option>
+                  <option value="155">155</option>
+                  <option value="156">156</option>
+                </select>  
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--height">
+                <select class="japanese-select--input japanese-select--height" name="height" multiple='multiple'>
+                  <option value="all">Все</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                </select>  
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--season">
+                <select class="japanese-select--input japanese-select--season" name="seasons" multiple='multiple'>
+                  <option value="all">Все</option>
+                  <option value="all_season">Всесезонная</option>
+                  <option value="winter">Зима</option>
+                </select>  
+              </div>
+              <div class="dropdown-input japanese-search-input japanese-search-input--warehouse">
+                <select class="japanese-select--input japanese-select--warehouse" name="warehouses" multiple='multiple'>
+                  <option value="Omsk">Омск</option>
+                  <option value="Vladivostok">Владивосток</option>
+                  <option value="Tumen">Тюмень</option>
+                  <option value="Moscow">Москва</option>
+                  <option value="Omsk_on_way">На пути в Омск</option>
+                  <option value="Vladivostok_on_way">На пути во Владивосток</option>
+                </select>  
+              </div>
+              <input class="input-group-field japanese-search-field japanese-search-input japanese-search-input--last" type="text" disabled>
+              <div class="input-group-button">
+                <input type="submit" class="button japanese-search-submit" value="Поиск">
+              </div>
+            </div>
+            <a class="japanese-search__how" href="#">Как пользоваться поиском?</a>
           </div>
           <div class="tabs-panel" id="panel5d">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div class="input-group">
+                  <div class="dropdown-input dropdown-brand japanese-search-input japanese-search-input--first">
+                    <select class="japanese-select--brand" name="brand" multiple='multiple'>
+                      <option value="honda">honda</option>
+                      <option value="Mazda">Mazda</option>
+                      <option value="Mitsubishi">Mitsubishi</option>
+                      <option value="nissan">nissan</option>
+                      <option value="subaru">subaru</option>
+                      <option value="suzuki">suzuki</option>
+                      <option value="toyota">toyota</option>
+                      <option value="audi">audi</option>
+                      <option value="bmw">bmw</option>
+                      <option value="cadillac">cadillac</option>
+                      <option value="caterpillar">caterpillar</option>
+                      <option value="chevrolet">chevrolet</option>
+                      <option value="chrysler">chrysler</option>
+                      <option value="citroen">citroen</option>
+                      <option value="crysler">crysler</option>
+                      <option value="daewoo">daewoo</option>
+                      <option value="daihatsu">daihatsu</option>
+                      <option value="dodge">dodge</option>
+                      <option value="fiat">fiat</option>
+                      <option value="ford">ford</option>
+                      <option value="hino">hino</option>
+                      <option value="hyundai">hyundai</option>
+                      <option value="infiniti">infiniti</option>
+                      <option value="isuzu">isuzu</option>
+                      <option value="jaguar">jaguar</option>
+                      <option value="jeep">jeep</option>
+                      <option value="kia">kia</option>
+                      <option value="land_rover">land rover</option>
+                      <option value="lexus">lexus</option>
+                      <option value="Mercedes">Mercedes</option>
+                      <option value="Mini">Mini</option>
+                      <option value="mitsuoka">mitsuoka</option>
+                      <option value="opel">opel</option>
+                      <option value="peugeot">peugeot</option>
+                      <option value="pontiac">pontiac</option>
+                      <option value="porsche">porsche</option>
+                      <option value="renault">renault</option>
+                      <option value="saab">saab</option>
+                      <option value="scion">scion</option>
+                      <option value="seat">seat</option>
+                      <option value="skoda">skoda</option>
+                      <option value="ssangyong">ssangyong</option>
+                      <option value="volkswagen">volkswagen</option>
+                      <option value="volvo">volvo</option>
+                    </select>
+                  </div>
+                  <div class="dropdown-input japanese-search-input japanese-search-input--radius">
+                    <select class="japanese-select--input japanese-select--radius" name="radius" multiple='multiple'>
+                      <option value="all">Все</option>
+                      <option value="r-12">R-12</option>
+                      <option value="r-13">R-13</option>
+                    </select>  
+                  </div>
+                  <div class="dropdown-input japanese-search-input japanese-search-input--type">
+                    <select class="japanese-select--input japanese-select--type" name="types" multiple='multiple'>
+                      <option value="all">Все</option>
+                      <option value="molten">Литой</option>
+                      <option value="repousse">Штампованный</option>
+                    </select>  
+                  </div>
+                  <div class="dropdown-input japanese-search-input japanese-search-input--sortie">
+                    <select class="japanese-select--input japanese-select--sortie" name="sorties" multiple='multiple'>
+                      <option value="all">Все</option>
+                      <option value="et-10">ET-10</option>
+                      <option value="et-15">ET-15</option>
+                    </select>  
+                  </div>
+                  <div class="dropdown-input japanese-search-input japanese-search-input--drilling">
+                    <select class="japanese-select--input japanese-select--drilling" name="drilling" multiple='multiple'>
+                      <option value="all">Все</option>
+                      <option value="4x100">4 x 100</option>
+                      <option value="4x108">4 x 108</option>
+                    </select>  
+                  </div>
+                  <div class="dropdown-input japanese-search-input japanese-search-input--warehouse">
+                    <select class="japanese-select--input japanese-select--warehouse" name="warehouses" multiple='multiple'>
+                      <option value="Omsk">Омск</option>
+                      <option value="Vladivostok">Владивосток</option>
+                      <option value="Tumen">Тюмень</option>
+                      <option value="Moscow">Москва</option>
+                      <option value="Omsk_on_way">На пути в Омск</option>
+                      <option value="Vladivostok_on_way">На пути во Владивосток</option>
+                    </select>  
+                  </div>
+                  <input class="input-group-field japanese-search-field japanese-search-input japanese-search-input--last" type="text" disabled>
+                  <div class="input-group-button">
+                    <input type="submit" class="button japanese-search-submit" value="Поиск">
+                  </div>
+                </div>
+                <a class="japanese-search__how" href="#">Как пользоваться поиском?</a>
           </div>
           <div class="tabs-panel" id="panel6d">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="input-group">
+              <div class="dropdown-input dropdown-brand japanese-search-input japanese-search-input--first">
+                <select class="japanese-select--brand" name="brand" multiple='multiple'>
+                  <option value="honda">honda</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="nissan">nissan</option>
+                  <option value="subaru">subaru</option>
+                  <option value="suzuki">suzuki</option>
+                  <option value="toyota">toyota</option>
+                  <option value="audi">audi</option>
+                  <option value="bmw">bmw</option>
+                  <option value="cadillac">cadillac</option>
+                  <option value="caterpillar">caterpillar</option>
+                  <option value="chevrolet">chevrolet</option>
+                  <option value="chrysler">chrysler</option>
+                  <option value="citroen">citroen</option>
+                  <option value="crysler">crysler</option>
+                  <option value="daewoo">daewoo</option>
+                  <option value="daihatsu">daihatsu</option>
+                  <option value="dodge">dodge</option>
+                  <option value="fiat">fiat</option>
+                  <option value="ford">ford</option>
+                  <option value="hino">hino</option>
+                  <option value="hyundai">hyundai</option>
+                  <option value="infiniti">infiniti</option>
+                  <option value="isuzu">isuzu</option>
+                  <option value="jaguar">jaguar</option>
+                  <option value="jeep">jeep</option>
+                  <option value="kia">kia</option>
+                  <option value="land_rover">land rover</option>
+                  <option value="lexus">lexus</option>
+                  <option value="Mercedes">Mercedes</option>
+                  <option value="Mini">Mini</option>
+                  <option value="mitsuoka">mitsuoka</option>
+                  <option value="opel">opel</option>
+                  <option value="peugeot">peugeot</option>
+                  <option value="pontiac">pontiac</option>
+                  <option value="porsche">porsche</option>
+                  <option value="renault">renault</option>
+                  <option value="saab">saab</option>
+                  <option value="scion">scion</option>
+                  <option value="seat">seat</option>
+                  <option value="skoda">skoda</option>
+                  <option value="ssangyong">ssangyong</option>
+                  <option value="volkswagen">volkswagen</option>
+                  <option value="volvo">volvo</option>
+                </select>
+              </div>
+              <input class="input-group-field japanese-search-field japanese-search-input japanese-search-input--last" type="text" placeholder="Название детали">
+              <div class="input-group-button">
+                <input type="submit" class="button japanese-search-submit" value="Поиск">
+              </div>
+            </div>
+            <a class="japanese-search__how" href="#">Как пользоваться поиском?</a>
           </div>
           <div class="tabs-panel" id="panel7d">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="input-group">
+              <div class="dropdown-input dropdown-brand japanese-search-input japanese-search-input--first">
+                <select class="japanese-select--brand" name="brand" multiple='multiple'>
+                  <option value="honda">honda</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="nissan">nissan</option>
+                  <option value="subaru">subaru</option>
+                  <option value="suzuki">suzuki</option>
+                  <option value="toyota">toyota</option>
+                  <option value="audi">audi</option>
+                  <option value="bmw">bmw</option>
+                  <option value="cadillac">cadillac</option>
+                  <option value="caterpillar">caterpillar</option>
+                  <option value="chevrolet">chevrolet</option>
+                  <option value="chrysler">chrysler</option>
+                  <option value="citroen">citroen</option>
+                  <option value="crysler">crysler</option>
+                  <option value="daewoo">daewoo</option>
+                  <option value="daihatsu">daihatsu</option>
+                  <option value="dodge">dodge</option>
+                  <option value="fiat">fiat</option>
+                  <option value="ford">ford</option>
+                  <option value="hino">hino</option>
+                  <option value="hyundai">hyundai</option>
+                  <option value="infiniti">infiniti</option>
+                  <option value="isuzu">isuzu</option>
+                  <option value="jaguar">jaguar</option>
+                  <option value="jeep">jeep</option>
+                  <option value="kia">kia</option>
+                  <option value="land_rover">land rover</option>
+                  <option value="lexus">lexus</option>
+                  <option value="Mercedes">Mercedes</option>
+                  <option value="Mini">Mini</option>
+                  <option value="mitsuoka">mitsuoka</option>
+                  <option value="opel">opel</option>
+                  <option value="peugeot">peugeot</option>
+                  <option value="pontiac">pontiac</option>
+                  <option value="porsche">porsche</option>
+                  <option value="renault">renault</option>
+                  <option value="saab">saab</option>
+                  <option value="scion">scion</option>
+                  <option value="seat">seat</option>
+                  <option value="skoda">skoda</option>
+                  <option value="ssangyong">ssangyong</option>
+                  <option value="volkswagen">volkswagen</option>
+                  <option value="volvo">volvo</option>
+                </select>
+              </div>
+              <input class="input-group-field japanese-search-field japanese-search-input japanese-search-input--last" type="text" placeholder="Название детали">
+              <div class="input-group-button">
+                <input type="submit" class="button japanese-search-submit" value="Поиск">
+              </div>
+            </div>
+            <a class="japanese-search__how" href="#">Как пользоваться поиском?</a>
           </div>
         </div>
       </div>
@@ -910,6 +1333,7 @@
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/gentleSelect/jquery-gentleSelect.js"></script>
   <script src="js/vendor/slick/slick.min.js"></script>
   <script src="js/app.js"></script>
   </body>
